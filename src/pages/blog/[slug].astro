@@ -19,7 +19,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<Layout title={entry.data.title} description={entry.data.postDetails.paraOne} image={entry.data.bigImg.src}>
+<Layout 标题={entry.data.title} 描述={entry.data.postDetails.paraOne} 图片={entry.data.bigImg.src}>
   <!-- ====== Blog Details Section Start -->
   <section class="pt-20 pb-10 lg:pt-[120px] lg:pb-20 dark:bg-dark">
     <div class="container">

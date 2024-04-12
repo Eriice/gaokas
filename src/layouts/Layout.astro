@@ -1,16 +1,15 @@
 ---
-import Footer from '../components/layout/Footer.astro';
-import Header from '../components/layout/Header.astro';
-import BackToTop from '../components/layout/BackToTop.astro';
-import MadeWithButton from '../components/layout/MadeWithButton.astro';
+import Footer from '../组件/布局组件/页面底栏.astro';
+import Header from '../组件/布局组件/页面顶栏.astro';
+import BackToTop from '../组件/布局组件/回到顶部.astro';
 
 interface Props {
-  description: string;
-  title: string;
-  image?: string;
+  描述: string;
+  标题: string;
+  图片?: string;
 }
 
-const { description, title, image } = Astro.props;
+const { 描述, 标题, 图片 } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -23,10 +22,10 @@ const { description, title, image } = Astro.props;
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
-    <meta property="og:image" content={image} />
-    <meta property="twitter:image" content={image} />
-    <title>{title}</title>
+    <meta name="description" content={描述} />
+    <meta property="og:image" content={图片} />
+    <meta property="twitter:image" content={图片} />
+    <title>{标题}</title>
   </head>
   <body>
     <Header />
@@ -36,7 +35,6 @@ const { description, title, image } = Astro.props;
     </main>
     <Footer />
     <BackToTop />
-    <MadeWithButton />
     <style is:global>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
       body {
